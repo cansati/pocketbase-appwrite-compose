@@ -1,0 +1,22 @@
+<BACKUP>
+docker-compose exec mariadb sh -c 'exec mysqldump --all-databases --add-drop-database -u"$MYSQL_USER" -p"$MYSQL_PASSWORD"' > ./dump.sql
+
+----
+Going into depth this command does a couple things:
+
+Docker-compose launches a temporary shell onto the MariaDB container to start work
+It runs mysqldump on the server with two specific options --all-databases and --add-drop-database these are important since they ensure that when the backup is restored old data doesn't get overlapped with new data.
+The output of mysqldump is piped into a dump.sql file. This is your backup
+----
+<BACKUP />
+
+
+
+<RESTORE>
+docker-compose exec -T mariadb sh -c 'exec mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD"' < dump.sql
+
+----
+Docker-compose launches a temporary shell onto the MariaDB container to start work
+Using the mysql command we restore the dump through a pipe
+----
+<RESTORE />

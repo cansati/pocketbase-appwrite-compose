@@ -1,0 +1,10 @@
+<POCKETBASE>
+    localhost:8090            ->   pocketbase
+    localhost:8090/_/         ->   dashboard
+    localhost:8090/api/       ->   api
+<POCKETBASE />
+
+
+<APPWRITE>
+    localhost:5456            ->   appwrite
+<APPWRITE />
