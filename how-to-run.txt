@@ -1,9 +1,9 @@
 TR
 1) Terminal açın, cd komutu ile terminal çalışma dizinini appwrite klasörünün içerisine ayarlayın.
-2) 'docker-compose up -d --delete-orphans' komutunu çalıştırın.
+2) 'docker-compose up -d --remove-orphans' komutunu çalıştırın.
 3) Port 8090'da Pocketbase, 5456'da Appwrite sizi bekliyor.
 
 EN
 1) In the terminal, set your current directory to directory of the appwrite folder.
-2) Run command 'docker-compose up -d --delete-orphans'
+2) Run command 'docker-compose up -d --remove-orphans'
 3) Pocketbase at the port 8090 and Apwrite at the 5456 are waiting for your interaction.
